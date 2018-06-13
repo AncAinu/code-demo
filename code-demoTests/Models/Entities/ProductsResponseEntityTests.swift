@@ -11,7 +11,9 @@ import XCTest
 class ProductsResponseEntityTests: XCTestCase {
 	func test_decoding_no_product() {
 		let json = """
-"products": []
+{
+	"products": []
+}
 """
 		let jsonData = json.data(using: .utf8)!
 		
@@ -21,16 +23,18 @@ class ProductsResponseEntityTests: XCTestCase {
 	
 	func test_decoding_1_product() {
 		let json = """
-"products": [
-	{
-		"productId": "102938",
-		"price": {
-			"now": "312.43"
-		},
-		"title": "Test product 12",
-		"image": "http://www.testurl.com/path/image.jpg"
-	}
-]
+{
+	"products": [
+		{
+			"productId": "102938",
+			"price": {
+				"now": "312.43"
+			},
+			"title": "Test product 12",
+			"image": "http://www.testurl.com/path/image.jpg"
+		}
+	]
+}
 """
 		let jsonData = json.data(using: .utf8)!
 		
@@ -44,24 +48,26 @@ class ProductsResponseEntityTests: XCTestCase {
 	
 	func test_decoding_2_products() {
 		let json = """
-"products": [
-	{
-		"productId": "102938",
-		"price": {
-			"now": "312.43"
+{
+	"products": [
+		{
+			"productId": "102938",
+			"price": {
+				"now": "312.43"
+			},
+			"title": "Test product 12",
+			"image": "http://www.testurl.com/path/image.jpg"
 		},
-		"title": "Test product 12",
-		"image": "http://www.testurl.com/path/image.jpg"
-	},
-	{
-		"productId": "32425",
-		"price": {
-			"now": "43.11"
-		},
-		"title": "Test product 11",
-		"image": "http://www.testurl.com/path/image2.jpg"
-	}
-]
+		{
+			"productId": "32425",
+			"price": {
+				"now": "43.11"
+			},
+			"title": "Test product 11",
+			"image": "http://www.testurl.com/path/image2.jpg"
+		}
+	]
+}
 """
 		let jsonData = json.data(using: .utf8)!
 		
