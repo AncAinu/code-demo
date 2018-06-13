@@ -1,5 +1,8 @@
 # Code Demo
 
+
+master: [![Build Status - master](https://www.bitrise.io/app/7b269aa72022b1dc/status.svg?token=SwfREuqPfW8WTjMMiXStPw&branch=master)](https://www.bitrise.io/app/7b269aa72022b1dc) | develop: [![Build Status - develop](https://www.bitrise.io/app/7b269aa72022b1dc/status.svg?token=SwfREuqPfW8WTjMMiXStPw&branch=develop)](https://www.bitrise.io/app/7b269aa72022b1dc)
+
 ## Technical choices
 
 ### Interface builder
