@@ -8,6 +8,9 @@ The project won't use interface builder, that's a subject for debate, albeit the
 
 ## Architecture
 
+The project use MVVM, as it is a nice mix between speed, testability, cleaness and popularity.
+MVC is often messy (but also misunderstood by 90% of developers) and VIPER is too much boilerplate for such a small project.
+
 ### Dependencies
 
 The project use cocoapods as a dependency manager, for the purpose of this project, because it is the most used.
