@@ -6,6 +6,10 @@
 
 The project won't use interface builder, that's a subject for debate, albeit the personal preference, it is rather easier to show skills through code which will appear on git than in IB.
 
+### Tests
+
+Since it is often ask to show TDD knowledge, the project will be done in a TDD way. Nevertheless, writing testable code is probably more important than writing tests. Writing testable code often ensure most of SOLID principles, hence code stability, cleaness and maintenability, whereas tests alone mostly protect against regressions.
+
 ## Architecture
 
 The project use MVVM, as it is a nice mix between speed, testability, cleaness and popularity.
