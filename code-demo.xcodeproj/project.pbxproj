@@ -10,7 +10,6 @@
 		2861D2BA00E481E0B95EE9C3 /* Pods_code_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9C197084252381695F90C9 /* Pods_code_demoTests.framework */; };
 		A93BF45620D1A3C600CF8984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF45520D1A3C600CF8984 /* AppDelegate.swift */; };
 		A93BF45820D1A3C600CF8984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF45720D1A3C600CF8984 /* ViewController.swift */; };
-		A93BF45B20D1A3C700CF8984 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93BF45920D1A3C700CF8984 /* Main.storyboard */; };
 		A93BF45D20D1A3CD00CF8984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93BF45C20D1A3CD00CF8984 /* Assets.xcassets */; };
 		A93BF46020D1A3CD00CF8984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93BF45E20D1A3CD00CF8984 /* LaunchScreen.storyboard */; };
 		A93BF46B20D1A3CD00CF8984 /* code_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF46A20D1A3CD00CF8984 /* code_demoTests.swift */; };
@@ -35,7 +34,6 @@
 		A93BF45220D1A3C600CF8984 /* code-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "code-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93BF45520D1A3C600CF8984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93BF45720D1A3C600CF8984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A93BF45A20D1A3C700CF8984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A93BF45C20D1A3CD00CF8984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93BF45F20D1A3CD00CF8984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A93BF46120D1A3CD00CF8984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			children = (
 				A93BF45520D1A3C600CF8984 /* AppDelegate.swift */,
 				A93BF45720D1A3C600CF8984 /* ViewController.swift */,
-				A93BF45920D1A3C700CF8984 /* Main.storyboard */,
 				A93BF45C20D1A3CD00CF8984 /* Assets.xcassets */,
 				A93BF45E20D1A3CD00CF8984 /* LaunchScreen.storyboard */,
 				A93BF46120D1A3CD00CF8984 /* Info.plist */,
@@ -216,7 +213,6 @@
 			files = (
 				A93BF46020D1A3CD00CF8984 /* LaunchScreen.storyboard in Resources */,
 				A93BF45D20D1A3CD00CF8984 /* Assets.xcassets in Resources */,
-				A93BF45B20D1A3C700CF8984 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A93BF45920D1A3C700CF8984 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A93BF45A20D1A3C700CF8984 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A93BF45E20D1A3CD00CF8984 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -387,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -441,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -458,7 +446,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitbuildr.code-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -474,7 +466,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitbuildr.code-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -491,7 +487,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitbuildr.code-demoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -509,7 +509,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitbuildr.code-demoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
