@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2861D2BA00E481E0B95EE9C3 /* Pods_code_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9C197084252381695F90C9 /* Pods_code_demoTests.framework */; };
+		A935AD5D20D1BE9B00B8DB6E /* ProductEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935AD5C20D1BE9B00B8DB6E /* ProductEntityTests.swift */; };
 		A93BF45620D1A3C600CF8984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF45520D1A3C600CF8984 /* AppDelegate.swift */; };
 		A93BF45820D1A3C600CF8984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF45720D1A3C600CF8984 /* ViewController.swift */; };
 		A93BF45D20D1A3CD00CF8984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93BF45C20D1A3CD00CF8984 /* Assets.xcassets */; };
 		A93BF46020D1A3CD00CF8984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93BF45E20D1A3CD00CF8984 /* LaunchScreen.storyboard */; };
-		A93BF46B20D1A3CD00CF8984 /* code_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF46A20D1A3CD00CF8984 /* code_demoTests.swift */; };
 		C0D2CFE766B2C60BB3BADBFE /* Pods_code_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360523582A09F910D1DBE116 /* Pods_code_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +31,7 @@
 		360523582A09F910D1DBE116 /* Pods_code_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_code_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D3D4F3D83CAD47E6C494BA /* Pods-code-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-code-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-code-demo/Pods-code-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A935AD5320D1A58E00B8DB6E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A935AD5C20D1BE9B00B8DB6E /* ProductEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntityTests.swift; sourceTree = "<group>"; };
 		A93BF45220D1A3C600CF8984 /* code-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "code-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93BF45520D1A3C600CF8984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93BF45720D1A3C600CF8984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		A93BF45F20D1A3CD00CF8984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A93BF46120D1A3CD00CF8984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93BF46620D1A3CD00CF8984 /* code-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "code-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A93BF46A20D1A3CD00CF8984 /* code_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = code_demoTests.swift; sourceTree = "<group>"; };
 		A93BF46C20D1A3CD00CF8984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C57AC3197FD940E48316A71F /* Pods-code-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-code-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-code-demo/Pods-code-demo.release.xcconfig"; sourceTree = "<group>"; };
 		CDE26C1213DDAB86F9823693 /* Pods-code-demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-code-demoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-code-demoTests/Pods-code-demoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +74,38 @@
 				CDE26C1213DDAB86F9823693 /* Pods-code-demoTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A935AD5520D1B4BC00B8DB6E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A935AD5820D1B73400B8DB6E /* Views */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A935AD5720D1B53100B8DB6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A935AD5B20D1BE0F00B8DB6E /* Entities */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A935AD5820D1B73400B8DB6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A935AD5920D1B82500B8DB6E /* ProductGridViewControllerTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A935AD5B20D1BE0F00B8DB6E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A935AD5C20D1BE9B00B8DB6E /* ProductEntityTests.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		A93BF44920D1A3C600CF8984 = {
@@ -112,7 +144,8 @@
 		A93BF46920D1A3CD00CF8984 /* code-demoTests */ = {
 			isa = PBXGroup;
 			children = (
-				A93BF46A20D1A3CD00CF8984 /* code_demoTests.swift */,
+				A935AD5720D1B53100B8DB6E /* Models */,
+				A935AD5520D1B4BC00B8DB6E /* Screens */,
 				A93BF46C20D1A3CD00CF8984 /* Info.plist */,
 			);
 			path = "code-demoTests";
@@ -183,6 +216,7 @@
 					};
 					A93BF46520D1A3CD00CF8984 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 						TestTargetID = A93BF45120D1A3C600CF8984;
 					};
 				};
@@ -298,7 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A93BF46B20D1A3CD00CF8984 /* code_demoTests.swift in Sources */,
+				A935AD5D20D1BE9B00B8DB6E /* ProductEntityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +518,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demoTests/Info.plist";
@@ -494,6 +529,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitbuildr.code-demoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/code-demo.app/code-demo";
@@ -506,6 +542,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demoTests/Info.plist";
