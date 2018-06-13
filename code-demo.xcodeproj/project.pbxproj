@@ -31,6 +31,7 @@
 		2FEF65BF3BF0279153513882 /* Pods-code-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-code-demoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-code-demoTests/Pods-code-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		360523582A09F910D1DBE116 /* Pods_code_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_code_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D3D4F3D83CAD47E6C494BA /* Pods-code-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-code-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-code-demo/Pods-code-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		A935AD5320D1A58E00B8DB6E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A93BF45220D1A3C600CF8984 /* code-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "code-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93BF45520D1A3C600CF8984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93BF45720D1A3C600CF8984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		A93BF44920D1A3C600CF8984 = {
 			isa = PBXGroup;
 			children = (
+				A935AD5320D1A58E00B8DB6E /* README.md */,
 				A93BF45420D1A3C600CF8984 /* code-demo */,
 				A93BF46920D1A3CD00CF8984 /* code-demoTests */,
 				A93BF45320D1A3C600CF8984 /* Products */,
@@ -139,6 +141,7 @@
 				A93BF44E20D1A3C600CF8984 /* Sources */,
 				A93BF44F20D1A3C600CF8984 /* Frameworks */,
 				A93BF45020D1A3C600CF8984 /* Resources */,
+				3196E2380073597F68A222FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +230,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3196E2380073597F68A222FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-code-demo/Pods-code-demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-code-demo/Pods-code-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4110E94B45C36CCAC027C6B1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,7 +456,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitbuildr.code-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -451,7 +475,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitbuildr.code-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -468,7 +495,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitbuildr.code-demoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -486,7 +517,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3JGMXBPB4;
 				INFOPLIST_FILE = "code-demoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bitbuildr.code-demoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

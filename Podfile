@@ -7,6 +7,8 @@ target 'code-demo' do
 
   # Pods for code-demo
 
+  pod 'Alamofire', '~> 4.7'
+
   target 'code-demoTests' do
     inherit! :search_paths
     # Pods for testing
