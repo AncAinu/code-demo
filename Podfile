@@ -8,6 +8,7 @@ target 'code-demo' do
   # Pods for code-demo
 
   pod 'Alamofire', '~> 4.7'
+  pod 'SnapKit', '~> 4.0.0'
 
   target 'code-demoTests' do
     inherit! :search_paths
