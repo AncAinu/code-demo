@@ -24,3 +24,4 @@ SnapKit is an Auto Layout DSL that facilitate and shorten the use of AutoLayout 
 
 The project use Git, with a git-flow method. Although, git-flow isn't very useful in a single man project, having at least the branches master / develop separated is of good practice.
 
+Pods are commited with the source, as a practice of safe keeping, anyone cloning the source should be able to run the code straight away without extra setup involved.
