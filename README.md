@@ -53,6 +53,8 @@ Pods are commited with the source, as a practice of safe keeping, anyone cloning
 
 Tests should normally be done in the same commit as the implementation itself, or rather not that separate, but for this project the tests are done in a separate commit before the implementation to emphasis how TDD is ongoing.
 
+**It is strongly recommanded to look at commits one by one to have a full grasp of how things were developed and how TDD has been acted while developing**
+
 ## Notes
 
 TTD proved its usefulness while searching to make all of your class testable. While designing `ProductCellTests`, it became obvious we wouldn't be able to test the display of the image with a real image url, as it would imply that our test rely on internet. It leads us to the conclusion that downloading an image should be done through a component that can be mockable. Therefore, we need to create something, a service, a controller, an image manager that is mockable (so behind an interface), it's interesting to note that without TDD, that option wouldn't have been considered, and the view would have just downloaded the image on its own. So now that we know we need that manager, we can safely asume the view model will give the UIImage (which is **not** a view, but data) directly, and that we would start creating that new "image manager" once we write the tests for the view model iteself.
