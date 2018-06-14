@@ -18,6 +18,10 @@ Since it is often ask to show TDD knowledge, the project will be done in a TDD w
 When testing models, we do tests the decoding of the data as given in the data contract of the api. We do not search to test "what if the price was a number and not a string?" because it is the responsability of the api to ensure they respect the contract they give.
 But we do test that we obtain the object we need throughout the app, while that object may be different both in form and type from what the api gives [see architecture > model > entities]
 
+#### Testing views
+
+When it come to views, unit testing will only test the logic of the view, not the way it displays (UI tests or snapshot tests are more useful in that case). The idea is that any view should be populated exclusively by a viewModel, which represents the data contract that view have to be used. We do not declare components inside views (labels, buttons...) as private so that we can test them later, but they shouldn't be used directly by other views.
+
 ## Architecture
 
 The project use MVVM, as it is a nice mix between speed, testability, cleaness and popularity.
