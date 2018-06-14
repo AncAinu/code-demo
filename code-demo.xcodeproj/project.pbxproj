@@ -28,6 +28,9 @@
 		A9D33AE020D3069200946C12 /* ProductCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D33ADC20D3057000946C12 /* ProductCellModel.swift */; };
 		A9D33AE520D3196600946C12 /* ProductCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D33AE420D3196600946C12 /* ProductCellTests.swift */; };
 		A9D33AE720D324E900946C12 /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D33AE620D324E900946C12 /* TestAssets.xcassets */; };
+		A9D33AE920D3267400946C12 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D33AE820D3267400946C12 /* ProductCell.swift */; };
+		A9D33AEA20D3287100946C12 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D33AE820D3267400946C12 /* ProductCell.swift */; };
+		A9D33AF020D3294900946C12 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D33AEF20D3294900946C12 /* ImageExtension.swift */; };
 		C0D2CFE766B2C60BB3BADBFE /* Pods_code_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360523582A09F910D1DBE116 /* Pods_code_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,8 @@
 		A9D33ADC20D3057000946C12 /* ProductCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModel.swift; sourceTree = "<group>"; };
 		A9D33AE420D3196600946C12 /* ProductCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellTests.swift; sourceTree = "<group>"; };
 		A9D33AE620D324E900946C12 /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
+		A9D33AE820D3267400946C12 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		A9D33AEF20D3294900946C12 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		C57AC3197FD940E48316A71F /* Pods-code-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-code-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-code-demo/Pods-code-demo.release.xcconfig"; sourceTree = "<group>"; };
 		CDE26C1213DDAB86F9823693 /* Pods-code-demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-code-demoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-code-demoTests/Pods-code-demoTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA9C197084252381695F90C9 /* Pods_code_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_code_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +203,7 @@
 		A93BF46920D1A3CD00CF8984 /* code-demoTests */ = {
 			isa = PBXGroup;
 			children = (
+				A9D33AEE20D3292B00946C12 /* Helpers */,
 				A935AD5720D1B53100B8DB6E /* Models */,
 				A935AD5520D1B4BC00B8DB6E /* Screens */,
 				A93BF46C20D1A3CD00CF8984 /* Info.plist */,
@@ -245,6 +251,7 @@
 		A9D33ADA20D3053900946C12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A9D33AE820D3267400946C12 /* ProductCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,6 +286,14 @@
 			children = (
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A9D33AEE20D3292B00946C12 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A9D33AEF20D3294900946C12 /* ImageExtension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F2D9C20C7C007BE599CA7175 /* Frameworks */ = {
@@ -460,6 +475,7 @@
 				A9D33ADD20D3057100946C12 /* ProductCellModel.swift in Sources */,
 				A93BF45820D1A3C600CF8984 /* ViewController.swift in Sources */,
 				A93BF45620D1A3C600CF8984 /* AppDelegate.swift in Sources */,
+				A9D33AE920D3267400946C12 /* ProductCell.swift in Sources */,
 				A9D33AD820D302BF00946C12 /* ProductGridViewControllerModelForProd.swift in Sources */,
 				A935AD6620D1CF4700B8DB6E /* ProductResponseEntity.swift in Sources */,
 			);
@@ -476,7 +492,9 @@
 				A9D33AE020D3069200946C12 /* ProductCellModel.swift in Sources */,
 				A935AD6D20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift in Sources */,
 				A935AD6720D1CF5300B8DB6E /* ProductResponseEntity.swift in Sources */,
+				A9D33AEA20D3287100946C12 /* ProductCell.swift in Sources */,
 				A9D33ADE20D3068600946C12 /* ProductGridViewController.swift in Sources */,
+				A9D33AF020D3294900946C12 /* ImageExtension.swift in Sources */,
 				A935AD6420D1CCFA00B8DB6E /* ProductsResponseEntityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

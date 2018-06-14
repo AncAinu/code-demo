@@ -10,7 +10,7 @@ import XCTest
 
 class ProductCellTests: XCTestCase {
 	
-	var mockedViewModel: ProductCellModelForTesting
+	var mockedViewModel: ProductCellModelForTesting!
 	var sut: ProductCell!
     
     override func setUp() {
@@ -35,10 +35,10 @@ class ProductCellTests: XCTestCase {
 	}
 	
 	func test_imageView() {
-		mockedViewModel.image = #imageLiteral(resourceName: "test-image")
+		mockedViewModel.image = UIImage.fromBundle(#imageLiteral(resourceName: "test-image"))
 		sut.viewModel = mockedViewModel
 
-		XCTAssertEqual(sut.imageView.image, #imageLiteral(resourceName: "test-image"))
+		XCTAssertEqual(sut.imageView.image, UIImage.fromBundle(#imageLiteral(resourceName: "test-image")) )
 	}
 }
 

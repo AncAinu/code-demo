@@ -34,6 +34,8 @@ extension ProductGridViewControllerTests {
 	}
 	
 	class ProductCellModelForTesting: ProductCellModel {
-		
+		var image: UIImage? = nil
+		var title: String = ""
+		var subtitle: String = ""
 	}
 }

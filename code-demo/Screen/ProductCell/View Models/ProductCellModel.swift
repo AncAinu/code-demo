@@ -6,8 +6,10 @@
 //  Copyright © 2018 BitBuildr. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ProductCellModel: AnyObject {
-	
+	var image: UIImage? { get }
+	var title: String { get }
+	var subtitle: String { get }
 }
