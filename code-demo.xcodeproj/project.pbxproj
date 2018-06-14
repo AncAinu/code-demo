@@ -14,6 +14,7 @@
 		A935AD6420D1CCFA00B8DB6E /* ProductsResponseEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935AD6320D1CCFA00B8DB6E /* ProductsResponseEntityTests.swift */; };
 		A935AD6620D1CF4700B8DB6E /* ProductResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935AD6520D1CF4700B8DB6E /* ProductResponseEntity.swift */; };
 		A935AD6720D1CF5300B8DB6E /* ProductResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935AD6520D1CF4700B8DB6E /* ProductResponseEntity.swift */; };
+		A935AD6D20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935AD6C20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift */; };
 		A93BF45620D1A3C600CF8984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF45520D1A3C600CF8984 /* AppDelegate.swift */; };
 		A93BF45820D1A3C600CF8984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF45720D1A3C600CF8984 /* ViewController.swift */; };
 		A93BF45D20D1A3CD00CF8984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93BF45C20D1A3CD00CF8984 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		A935AD6020D1C4A000B8DB6E /* ProductEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntity.swift; sourceTree = "<group>"; };
 		A935AD6320D1CCFA00B8DB6E /* ProductsResponseEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsResponseEntityTests.swift; sourceTree = "<group>"; };
 		A935AD6520D1CF4700B8DB6E /* ProductResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponseEntity.swift; sourceTree = "<group>"; };
+		A935AD6C20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridViewControllerTests.swift; sourceTree = "<group>"; };
 		A93BF45220D1A3C600CF8984 /* code-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "code-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93BF45520D1A3C600CF8984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93BF45720D1A3C600CF8984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		A935AD5720D1B53100B8DB6E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A935AD6920D1D1AE00B8DB6E /* Services */,
 				A935AD5B20D1BE0F00B8DB6E /* Entities */,
 			);
 			path = Models;
@@ -103,6 +106,7 @@
 		A935AD5820D1B73400B8DB6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A935AD6C20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +135,13 @@
 				A935AD6520D1CF4700B8DB6E /* ProductResponseEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		A935AD6920D1D1AE00B8DB6E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A93BF44920D1A3C600CF8984 = {
@@ -362,6 +373,7 @@
 			files = (
 				A935AD6220D1C7B300B8DB6E /* ProductEntity.swift in Sources */,
 				A935AD5D20D1BE9B00B8DB6E /* ProductEntityTests.swift in Sources */,
+				A935AD6D20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift in Sources */,
 				A935AD6720D1CF5300B8DB6E /* ProductResponseEntity.swift in Sources */,
 				A935AD6420D1CCFA00B8DB6E /* ProductsResponseEntityTests.swift in Sources */,
 			);
