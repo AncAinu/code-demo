@@ -26,6 +26,8 @@
 		A9D33ADE20D3068600946C12 /* ProductGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D33AD320D3027A00946C12 /* ProductGridViewController.swift */; };
 		A9D33ADF20D3068D00946C12 /* ProductGridViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D33AD520D3029000946C12 /* ProductGridViewControllerModel.swift */; };
 		A9D33AE020D3069200946C12 /* ProductCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D33ADC20D3057000946C12 /* ProductCellModel.swift */; };
+		A9D33AE520D3196600946C12 /* ProductCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D33AE420D3196600946C12 /* ProductCellTests.swift */; };
+		A9D33AE720D324E900946C12 /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D33AE620D324E900946C12 /* TestAssets.xcassets */; };
 		C0D2CFE766B2C60BB3BADBFE /* Pods_code_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360523582A09F910D1DBE116 /* Pods_code_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		A9D33AD520D3029000946C12 /* ProductGridViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridViewControllerModel.swift; sourceTree = "<group>"; };
 		A9D33AD720D302BF00946C12 /* ProductGridViewControllerModelForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridViewControllerModelForProd.swift; sourceTree = "<group>"; };
 		A9D33ADC20D3057000946C12 /* ProductCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModel.swift; sourceTree = "<group>"; };
+		A9D33AE420D3196600946C12 /* ProductCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellTests.swift; sourceTree = "<group>"; };
+		A9D33AE620D324E900946C12 /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 		C57AC3197FD940E48316A71F /* Pods-code-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-code-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-code-demo/Pods-code-demo.release.xcconfig"; sourceTree = "<group>"; };
 		CDE26C1213DDAB86F9823693 /* Pods-code-demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-code-demoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-code-demoTests/Pods-code-demoTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA9C197084252381695F90C9 /* Pods_code_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_code_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +104,7 @@
 		A935AD5520D1B4BC00B8DB6E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A9D33AE120D3188800946C12 /* ProductCell */,
 				A935AD5820D1B73400B8DB6E /* Views */,
 			);
 			path = Screens;
@@ -196,6 +201,7 @@
 				A935AD5720D1B53100B8DB6E /* Models */,
 				A935AD5520D1B4BC00B8DB6E /* Screens */,
 				A93BF46C20D1A3CD00CF8984 /* Info.plist */,
+				A9D33AE620D324E900946C12 /* TestAssets.xcassets */,
 			);
 			path = "code-demoTests";
 			sourceTree = "<group>";
@@ -230,7 +236,7 @@
 		A9D33AD920D3052B00946C12 /* ProductCell */ = {
 			isa = PBXGroup;
 			children = (
-				A9D33ADB20D3054C00946C12 /* VIew Models */,
+				A9D33ADB20D3054C00946C12 /* View Models */,
 				A9D33ADA20D3053900946C12 /* Views */,
 			);
 			path = ProductCell;
@@ -243,12 +249,36 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A9D33ADB20D3054C00946C12 /* VIew Models */ = {
+		A9D33ADB20D3054C00946C12 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
 				A9D33ADC20D3057000946C12 /* ProductCellModel.swift */,
 			);
-			path = "VIew Models";
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A9D33AE120D3188800946C12 /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				A9D33AE320D318A100946C12 /* View Models */,
+				A9D33AE220D3189B00946C12 /* Views */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		A9D33AE220D3189B00946C12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A9D33AE420D3196600946C12 /* ProductCellTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9D33AE320D318A100946C12 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		F2D9C20C7C007BE599CA7175 /* Frameworks */ = {
@@ -354,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D33AE720D324E900946C12 /* TestAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +472,7 @@
 				A935AD6220D1C7B300B8DB6E /* ProductEntity.swift in Sources */,
 				A935AD5D20D1BE9B00B8DB6E /* ProductEntityTests.swift in Sources */,
 				A9D33ADF20D3068D00946C12 /* ProductGridViewControllerModel.swift in Sources */,
+				A9D33AE520D3196600946C12 /* ProductCellTests.swift in Sources */,
 				A9D33AE020D3069200946C12 /* ProductCellModel.swift in Sources */,
 				A935AD6D20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift in Sources */,
 				A935AD6720D1CF5300B8DB6E /* ProductResponseEntity.swift in Sources */,
