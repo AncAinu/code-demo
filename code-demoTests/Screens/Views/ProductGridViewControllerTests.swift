@@ -19,12 +19,12 @@ class ProductGridViewControllerTests: XCTestCase {
 	
 	func test_no_products() {
 		mockedViewModel.productCellModels = []
-		XCTAssertEqual(sut.collectionView.numberOfCells.count, 0)
+		XCTAssertEqual(sut.collectionView?.numberOfItems(inSection: 0), 0)
 	}
 	
 	func test_3_products() {
 		mockedViewModel.productCellModels = [ProductCellModelForTesting(), ProductCellModelForTesting(), ProductCellModelForTesting()]
-		XCTAssertEqual(sut.collectionView.numberOfCells.count, 3)
+		XCTAssertEqual(sut.collectionView?.numberOfItems(inSection: 0), 3)
 	}
 }
 
