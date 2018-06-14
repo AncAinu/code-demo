@@ -50,3 +50,7 @@ SnapKit is an Auto Layout DSL that facilitate and shorten the use of AutoLayout 
 The project use Git, with a git-flow method. Although, git-flow isn't very useful in a single man project, having at least the branches master / develop separated is of good practice.
 
 Pods are commited with the source, as a practice of safe keeping, anyone cloning the source should be able to run the code straight away without extra setup involved.
+
+## Notes
+
+TTD proved its usefulness while searching to make all of your class testable. While designing `ProductCellTests`, it became obvious we wouldn't be able to test the display of the image with a real image url, as it would imply that our test rely on internet. It leads us to the conclusion that downloading an image should be done through a component that can be mockable. Therefore, we need to create something, a service, a controller, an image manager that is mockable (so behind an interface), it's interesting to note that without TDD, that option wouldn't have been considered, and the view would have just downloaded the image on its own. So now that we know we need that manager, we can safely asume the view model will give the UIImage (which is **not** a view, but data) directly, and that we would start creating that new "image manager" once we write the tests for the view model iteself.
