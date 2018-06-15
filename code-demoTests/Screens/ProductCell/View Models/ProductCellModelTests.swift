@@ -29,7 +29,7 @@ class ProductCellModelTests: XCTestCase {
 		mockedProductEntity.price = 2.49
 		let sut = ProductCellModelForProd(product: mockedProductEntity, imageService: mockedImageService)
 		
-		XCTAssertEqual(sut.title, "£2.49")
+		XCTAssertEqual(sut.subtitle, "£2.49")
 	}
 	
 	func test_image() {
@@ -49,8 +49,8 @@ extension ProductCellModelTests {
 	}
 	
 	class ImageServiceForTesting: ImageService {
-		func imageForUrl(_ url: URL, response: ImageServiceResponse) {
-			return ImageServiceResponse.success(UIImage.fromBundle(#imageLiteral(resourceName: "test-image")))
+		func imageForUrl(_ url: URL, response: @escaping ImageServiceResponse) {
+			response(.success(UIImage.fromBundle(#imageLiteral(resourceName: "test-image"))))
 		}
 	}
 }
