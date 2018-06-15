@@ -8,7 +8,14 @@
 
 import Foundation
 
-struct ProductEntity: Codable {
+protocol ProductEntity: Codable {
+	var productId: String { get }
+	var title: String { get }
+	var imageUrl: URL { get }
+	var price: Float { get }
+}
+
+struct ProductEntityForProd: ProductEntity {
 	struct Price: Codable {
 		let now: String
 	}

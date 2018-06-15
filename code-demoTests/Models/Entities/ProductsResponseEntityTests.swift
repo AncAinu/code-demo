@@ -17,7 +17,7 @@ class ProductsResponseEntityTests: XCTestCase {
 """
 		let jsonData = json.data(using: .utf8)!
 		
-		let sut = try? JSONDecoder().decode(ProductResponseEntity.self, from: jsonData)
+		let sut = try? JSONDecoder().decode(ProductResponseEntityForProd.self, from: jsonData)
 		XCTAssertEqual(sut?.products.count, 0)
 	}
 	
@@ -38,7 +38,7 @@ class ProductsResponseEntityTests: XCTestCase {
 """
 		let jsonData = json.data(using: .utf8)!
 		
-		let sut = try? JSONDecoder().decode(ProductResponseEntity.self, from: jsonData)
+		let sut = try? JSONDecoder().decode(ProductResponseEntityForProd.self, from: jsonData)
 		XCTAssertEqual(sut?.products.count, 1)
 		XCTAssertEqual(sut?.products[0].productId, "102938")
 		XCTAssertEqual(sut?.products[0].price, 312.43)
@@ -71,7 +71,7 @@ class ProductsResponseEntityTests: XCTestCase {
 """
 		let jsonData = json.data(using: .utf8)!
 		
-		let sut = try? JSONDecoder().decode(ProductResponseEntity.self, from: jsonData)
+		let sut = try? JSONDecoder().decode(ProductResponseEntityForProd.self, from: jsonData)
 		XCTAssertEqual(sut?.products.count, 2)
 		
 		XCTAssertEqual(sut?.products[0].productId, "102938")

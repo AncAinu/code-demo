@@ -23,7 +23,7 @@ class ProductEntityTests: XCTestCase {
 """
 		let jsonData = json.data(using: .utf8)!
 		
-		let sut = try? JSONDecoder().decode(ProductEntity.self, from: jsonData)
+		let sut = try? JSONDecoder().decode(ProductEntityForProd.self, from: jsonData)
 		XCTAssertEqual(sut?.productId, "102938")
 		XCTAssertEqual(sut?.price, 312.43)
 		XCTAssertEqual(sut?.title, "Test product 12")
