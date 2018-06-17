@@ -23,9 +23,9 @@ class ProductGridViewControllerModelTests: XCTestCase {
     }
 	
 	func test_refresh() {
-		XCTAssertEqual(sut.productCellModels.count, 0)
+		XCTAssertEqual(sut.productCellModels.count, 1) // We check that its taking the existing value
 		sut.refresh()
-		XCTAssertEqual(sut.productCellModels.count, 3)
+		XCTAssertEqual(sut.productCellModels.count, 3) // And then the new one
 	}
 }
 
@@ -38,8 +38,10 @@ extension ProductGridViewControllerModelTests {
 	}
 	
 	class DataServiceForTesting: DataService {
-		func requestProducts(response: @escaping Response<[ProductEntity]>) {
-			response(.success([ProductEntityForTesting(), ProductEntityForTesting(), ProductEntityForTesting()]))
+		let products = Dynamic<[ProductEntity]>([ProductEntityForTesting()])
+		
+		func reloadProducts() {
+			products.value = [ProductEntityForTesting(), ProductEntityForTesting(), ProductEntityForTesting()]
 		}
 	}
 	

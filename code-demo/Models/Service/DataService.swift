@@ -9,6 +9,8 @@
 import Foundation
 
 protocol DataService {
-	func requestProducts(response: @escaping Response<[ProductEntity]>)
+	var products: Dynamic<[ProductEntity]> { get }
+	
+	func reloadProducts()
 }
 

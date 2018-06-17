@@ -14,23 +14,23 @@ class ProductGridViewControllerModelForProd: ProductGridViewControllerModel {
 	
 	private(set) var productCellModels: [ProductCellModel] = []
 	
+	// MARK: INIT
 	init(dataService: DataService, imageService: ImageService) {
 		self.dataService = dataService
 		self.imageService = imageService
-	}
-	
-	func refresh() {
-		dataService.requestProducts { [weak self] result in
+		
+		// Bindings
+		dataService.products.bindAndFire(self) { [weak self] value in
 			guard let `self` = self else { return }
 			
-			switch result {
-			case .success(let products):
-				self.productCellModels = products.map {
-					ProductCellModelForProd(product: $0, imageService: self.imageService)
-				}
-			case .failure(_):
-				break // Do nothing
+			self.productCellModels = value.map {
+				ProductCellModelForProd(product: $0, imageService: self.imageService)
 			}
 		}
+	}
+	
+	// MARK: METHODS
+	func refresh() {
+		dataService.reloadProducts()
 	}
 }

@@ -18,18 +18,15 @@ class DataServiceTests: XCTestCase {
 		sut = DataServiceForProd(apiService: mockedApiService)
 	}
 	
-	func test_requestProducts() {
+	func test_reloadProducts() {
 		let expectation = XCTestExpectation(description: "test_requestProducts")
 		
-		sut.requestProducts { result in
-			switch result {
-			case .success(let products):
-				XCTAssertEqual(products.count, 3)
-				expectation.fulfill()
-			case .failure(_):
-				break
-			}
+		sut.products.bind(self) { value in
+			XCTAssertEqual(value.count, 3)
+			expectation.fulfill()
 		}
+		
+		sut.reloadProducts()
 		
 		wait(for: [expectation], timeout: 0)
 	}

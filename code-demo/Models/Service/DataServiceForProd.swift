@@ -11,11 +11,24 @@ import Foundation
 class DataServiceForProd: DataService {
 	private let apiService: ApiService
 	
+	let products = Dynamic<[ProductEntity]>([])
+	
+	// MARK: INIT
 	init(apiService: ApiService) {
 		self.apiService = apiService
 	}
 	
-	func requestProducts(response: @escaping (Result<[ProductEntity]>) -> Void) {
-		apiService.requestProducts(response: response)
+	// MARK: METHODS
+	func reloadProducts() {
+		apiService.requestProducts { [weak self] result in
+			guard let `self` = self else { return }
+			
+			switch result {
+			case .success(let products):
+				self.products.value = products
+			case .failure(_):
+				break // Do nothing
+			}
+		}
 	}
 }

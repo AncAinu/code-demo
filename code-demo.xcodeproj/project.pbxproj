@@ -29,6 +29,8 @@
 		A94BFF8B20D68A3400E9351A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8A20D68A3400E9351A /* ApiService.swift */; };
 		A94BFF8C20D68B3600E9351A /* DataServiceForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8820D68A2800E9351A /* DataServiceForProd.swift */; };
 		A94BFF8D20D68B3900E9351A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8A20D68A3400E9351A /* ApiService.swift */; };
+		A94BFF8F20D68E9B00E9351A /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8E20D68E9B00E9351A /* Dynamic.swift */; };
+		A94BFF9320D68FB800E9351A /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8E20D68E9B00E9351A /* Dynamic.swift */; };
 		A96AFE0220D403EA001B55C1 /* ProductCellModelForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AFE0120D403EA001B55C1 /* ProductCellModelForProd.swift */; };
 		A96AFE0820D4086E001B55C1 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AFE0720D4086E001B55C1 /* ImageService.swift */; };
 		A96AFE0A20D4090A001B55C1 /* ImageServiceForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AFE0920D4090A001B55C1 /* ImageServiceForProd.swift */; };
@@ -84,6 +86,7 @@
 		A94BFF8620D6884D00E9351A /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 		A94BFF8820D68A2800E9351A /* DataServiceForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceForProd.swift; sourceTree = "<group>"; };
 		A94BFF8A20D68A3400E9351A /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		A94BFF8E20D68E9B00E9351A /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		A96AFE0120D403EA001B55C1 /* ProductCellModelForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModelForProd.swift; sourceTree = "<group>"; };
 		A96AFE0720D4086E001B55C1 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		A96AFE0920D4090A001B55C1 /* ImageServiceForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceForProd.swift; sourceTree = "<group>"; };
@@ -246,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				A94BFF8120D6821D00E9351A /* Types.swift */,
+				A94BFF8E20D68E9B00E9351A /* Dynamic.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -541,6 +545,7 @@
 				A9D33ADD20D3057100946C12 /* ProductCellModel.swift in Sources */,
 				A96AFE0A20D4090A001B55C1 /* ImageServiceForProd.swift in Sources */,
 				A96AFE0220D403EA001B55C1 /* ProductCellModelForProd.swift in Sources */,
+				A94BFF8F20D68E9B00E9351A /* Dynamic.swift in Sources */,
 				A93BF45820D1A3C600CF8984 /* ViewController.swift in Sources */,
 				A93BF45620D1A3C600CF8984 /* AppDelegate.swift in Sources */,
 				A9D33AE920D3267400946C12 /* ProductCell.swift in Sources */,
@@ -561,6 +566,7 @@
 				A9D33ADF20D3068D00946C12 /* ProductGridViewControllerModel.swift in Sources */,
 				A94BFF8D20D68B3900E9351A /* ApiService.swift in Sources */,
 				A9D33AE520D3196600946C12 /* ProductCellTests.swift in Sources */,
+				A94BFF9320D68FB800E9351A /* Dynamic.swift in Sources */,
 				A9D33AE020D3069200946C12 /* ProductCellModel.swift in Sources */,
 				A935AD6D20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift in Sources */,
 				A935AD6720D1CF5300B8DB6E /* ProductResponseEntity.swift in Sources */,
