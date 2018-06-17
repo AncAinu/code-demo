@@ -36,6 +36,7 @@ class ProductCell: UICollectionViewCell {
 		super.init(frame: frame)
 		
 		imageView.contentMode = .scaleAspectFit
+		imageView.clipsToBounds = true
 		contentView.addSubview(imageView)
 		
 		contentView.addSubview(titleLabel)
@@ -47,11 +48,13 @@ class ProductCell: UICollectionViewCell {
 			$0.left.right.top.equalToSuperview().inset(10)
 		}
 		
+		titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
 		titleLabel.snp.makeConstraints {
 			$0.left.right.equalToSuperview().inset(10)
 			$0.top.equalTo(imageView.snp.bottom).offset(10)
 		}
 		
+		subtitleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
 		subtitleLabel.snp.makeConstraints {
 			$0.left.right.equalToSuperview().inset(10)
 			$0.top.equalTo(titleLabel.snp.bottom).offset(10)
