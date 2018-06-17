@@ -9,18 +9,18 @@
 import UIKit
 
 class ProductCellModelForProd: ProductCellModel {
-	var image: UIImage? = nil
-	var title: String
-	var subtitle: String
+	let image = Dynamic<UIImage?>(nil)
+	let title = Dynamic<String>("")
+	let subtitle = Dynamic<String>("")
 	
 	init(product: ProductEntity, imageService: ImageService) {
-		title = product.title
-		subtitle = "£\(product.price)"
+		title.value = product.title
+		subtitle.value = "£\(product.price)"
 		
 		imageService.imageForUrl(product.imageUrl) { [weak self] result in
 			switch result {
 			case .success(let image):
-				self?.image = image
+				self?.image.value = image
 			case .failure(_):
 				break // Do nothing
 			}

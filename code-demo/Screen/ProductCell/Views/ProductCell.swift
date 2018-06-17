@@ -16,9 +16,15 @@ class ProductCell: UICollectionViewCell {
 		didSet {
 			guard let viewModel = viewModel else { return }
 			
-			imageView.image = viewModel.image
-			titleLabel.text = viewModel.title
-			subtitleLabel.text = viewModel.subtitle
+			viewModel.image.bindAndFire(self) { [weak self] value in
+				self?.imageView.image = value
+			}
+			viewModel.title.bindAndFire(self) { [weak self] value in
+				self?.titleLabel.text = value
+			}
+			viewModel.subtitle.bindAndFire(self) { [weak self] value in
+				self?.subtitleLabel.text = value
+			}
 		}
 	}
 	
@@ -39,7 +45,6 @@ class ProductCell: UICollectionViewCell {
 		// Auto Layout
 		imageView.snp.makeConstraints {
 			$0.left.right.top.equalToSuperview().inset(10)
-			$0.width.equalTo(imageView.snp.height)
 		}
 		
 		titleLabel.snp.makeConstraints {
@@ -52,6 +57,12 @@ class ProductCell: UICollectionViewCell {
 			$0.top.equalTo(titleLabel.snp.bottom).offset(10)
 			$0.bottom.equalToSuperview().offset(-10)
 		}
+	}
+	
+	override func prepareForReuse() {
+		viewModel?.image.unbind(listener: self)
+		viewModel?.title.unbind(listener: self)
+		viewModel?.subtitle.unbind(listener: self)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {

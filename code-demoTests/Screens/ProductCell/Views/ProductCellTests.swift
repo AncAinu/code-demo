@@ -21,21 +21,21 @@ class ProductCellTests: XCTestCase {
     }
 	
 	func test_titleLabel() {
-		mockedViewModel.title = "asufh uhsiufhuisdh"
+		mockedViewModel.title.value = "asufh uhsiufhuisdh"
 		sut.viewModel = mockedViewModel
 		
 		XCTAssertEqual(sut.titleLabel.text, "asufh uhsiufhuisdh")
 	}
 	
 	func test_subtitleLabel() {
-		mockedViewModel.subtitle = "£22.87"
+		mockedViewModel.subtitle.value = "£22.87"
 		sut.viewModel = mockedViewModel
 		
 		XCTAssertEqual(sut.subtitleLabel.text, "£22.87")
 	}
 	
 	func test_imageView() {
-		mockedViewModel.image = UIImage.fromBundle(#imageLiteral(resourceName: "test-image"))
+		mockedViewModel.image.value = UIImage.fromBundle(#imageLiteral(resourceName: "test-image"))
 		sut.viewModel = mockedViewModel
 
 		XCTAssertEqual(sut.imageView.image, UIImage.fromBundle(#imageLiteral(resourceName: "test-image")) )
@@ -44,8 +44,8 @@ class ProductCellTests: XCTestCase {
 
 extension ProductCellTests {
 	class ProductCellModelForTesting: ProductCellModel {
-		var title: String = ""
-		var image: UIImage? = nil
-		var subtitle: String = ""
+		let image = Dynamic<UIImage?>(nil)
+		let title = Dynamic<String>("")
+		let subtitle = Dynamic<String>("")
 	}
 }

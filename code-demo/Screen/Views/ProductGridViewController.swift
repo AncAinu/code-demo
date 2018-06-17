@@ -16,8 +16,13 @@ class ProductGridViewController: UICollectionViewController {
 		self.viewModel = viewModel
 		
 		let flowLayout = UICollectionViewFlowLayout()
+		flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
+		flowLayout.minimumInteritemSpacing = 0
+		flowLayout.minimumLineSpacing = 0
 		
 		super.init(collectionViewLayout: flowLayout)
+		
+		title = "Fridges"
 		
 		viewModel.productCellModels.bind(self) { [weak self] _ in
 			self?.collectionView?.reloadData()
@@ -31,6 +36,9 @@ class ProductGridViewController: UICollectionViewController {
 	// MARK: LAYOUT
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		view.backgroundColor = .white
+		collectionView?.backgroundColor = .white
 		
 		collectionView?.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
 		

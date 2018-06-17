@@ -22,21 +22,21 @@ class ProductCellModelTests: XCTestCase {
 		mockedProductEntity.title = "aouishdfjoijvcx"
 		let sut = ProductCellModelForProd(product: mockedProductEntity, imageService: mockedImageService)
 		
-		XCTAssertEqual(sut.title, "aouishdfjoijvcx")
+		XCTAssertEqual(sut.title.value, "aouishdfjoijvcx")
 	}
 	
 	func test_subtitle() {
 		mockedProductEntity.price = 2.49
 		let sut = ProductCellModelForProd(product: mockedProductEntity, imageService: mockedImageService)
 		
-		XCTAssertEqual(sut.subtitle, "£2.49")
+		XCTAssertEqual(sut.subtitle.value, "£2.49")
 	}
 	
 	func test_image() {
 		// We actually make sure that the viewModel does connect to the image service properly
 		mockedProductEntity.imageUrl = URL(string: "http://test.com")!
 		let sut = ProductCellModelForProd(product: mockedProductEntity, imageService: mockedImageService)
-		XCTAssertEqual(sut.image, UIImage.fromBundle(#imageLiteral(resourceName: "test-image")))
+		XCTAssertEqual(sut.image.value, UIImage.fromBundle(#imageLiteral(resourceName: "test-image")))
 	}
 }
 

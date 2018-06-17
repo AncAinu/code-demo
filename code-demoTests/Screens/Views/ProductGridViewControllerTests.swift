@@ -35,8 +35,8 @@ extension ProductGridViewControllerTests {
 	}
 	
 	class ProductCellModelForTesting: ProductCellModel {
-		var image: UIImage? = nil
-		var title: String = ""
-		var subtitle: String = ""
+		let image = Dynamic<UIImage?>(nil)
+		let title = Dynamic<String>("")
+		let subtitle = Dynamic<String>("")
 	}
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProductCellModel: AnyObject {
-	var image: UIImage? { get }
-	var title: String { get }
-	var subtitle: String { get }
+	var image: Dynamic<UIImage?> { get }
+	var title: Dynamic<String> { get }
+	var subtitle: Dynamic<String> { get }
 }
