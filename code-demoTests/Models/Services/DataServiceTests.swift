@@ -44,7 +44,7 @@ extension DataServiceTests {
 	}
 	
 	class ApiServiceForTesting: ApiService {
-		func requestProducts(response: Response<[ProductEntity]>) {
+		func requestProducts(response: @escaping Response<[ProductEntity]>) {
 			response(.success([ProductEntityForTesting(), ProductEntityForTesting(), ProductEntityForTesting()]))
 		}
 	}

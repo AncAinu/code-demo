@@ -25,6 +25,10 @@
 		A94BFF8420D683BA00E9351A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF7E20D6819000E9351A /* DataService.swift */; };
 		A94BFF8520D683C800E9351A /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8120D6821D00E9351A /* Types.swift */; };
 		A94BFF8720D6884D00E9351A /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8620D6884D00E9351A /* DataServiceTests.swift */; };
+		A94BFF8920D68A2800E9351A /* DataServiceForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8820D68A2800E9351A /* DataServiceForProd.swift */; };
+		A94BFF8B20D68A3400E9351A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8A20D68A3400E9351A /* ApiService.swift */; };
+		A94BFF8C20D68B3600E9351A /* DataServiceForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8820D68A2800E9351A /* DataServiceForProd.swift */; };
+		A94BFF8D20D68B3900E9351A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8A20D68A3400E9351A /* ApiService.swift */; };
 		A96AFE0220D403EA001B55C1 /* ProductCellModelForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AFE0120D403EA001B55C1 /* ProductCellModelForProd.swift */; };
 		A96AFE0820D4086E001B55C1 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AFE0720D4086E001B55C1 /* ImageService.swift */; };
 		A96AFE0A20D4090A001B55C1 /* ImageServiceForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AFE0920D4090A001B55C1 /* ImageServiceForProd.swift */; };
@@ -78,6 +82,8 @@
 		A94BFF7E20D6819000E9351A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A94BFF8120D6821D00E9351A /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		A94BFF8620D6884D00E9351A /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
+		A94BFF8820D68A2800E9351A /* DataServiceForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceForProd.swift; sourceTree = "<group>"; };
+		A94BFF8A20D68A3400E9351A /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		A96AFE0120D403EA001B55C1 /* ProductCellModelForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModelForProd.swift; sourceTree = "<group>"; };
 		A96AFE0720D4086E001B55C1 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		A96AFE0920D4090A001B55C1 /* ImageServiceForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceForProd.swift; sourceTree = "<group>"; };
@@ -250,6 +256,8 @@
 				A96AFE0720D4086E001B55C1 /* ImageService.swift */,
 				A96AFE0920D4090A001B55C1 /* ImageServiceForProd.swift */,
 				A94BFF7E20D6819000E9351A /* DataService.swift */,
+				A94BFF8820D68A2800E9351A /* DataServiceForProd.swift */,
+				A94BFF8A20D68A3400E9351A /* ApiService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -528,6 +536,8 @@
 				A9D33AD420D3027A00946C12 /* ProductGridViewController.swift in Sources */,
 				A94BFF8220D6821D00E9351A /* Types.swift in Sources */,
 				A935AD6120D1C4A000B8DB6E /* ProductEntity.swift in Sources */,
+				A94BFF8920D68A2800E9351A /* DataServiceForProd.swift in Sources */,
+				A94BFF8B20D68A3400E9351A /* ApiService.swift in Sources */,
 				A9D33ADD20D3057100946C12 /* ProductCellModel.swift in Sources */,
 				A96AFE0A20D4090A001B55C1 /* ImageServiceForProd.swift in Sources */,
 				A96AFE0220D403EA001B55C1 /* ProductCellModelForProd.swift in Sources */,
@@ -549,11 +559,13 @@
 				A96AFE0D20D40ADC001B55C1 /* ProductCellModelForProd.swift in Sources */,
 				A96AFE1020D40EB2001B55C1 /* ProductGridViewControllerModelTests.swift in Sources */,
 				A9D33ADF20D3068D00946C12 /* ProductGridViewControllerModel.swift in Sources */,
+				A94BFF8D20D68B3900E9351A /* ApiService.swift in Sources */,
 				A9D33AE520D3196600946C12 /* ProductCellTests.swift in Sources */,
 				A9D33AE020D3069200946C12 /* ProductCellModel.swift in Sources */,
 				A935AD6D20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift in Sources */,
 				A935AD6720D1CF5300B8DB6E /* ProductResponseEntity.swift in Sources */,
 				A94BFF8320D6837B00E9351A /* ProductGridViewControllerModelForProd.swift in Sources */,
+				A94BFF8C20D68B3600E9351A /* DataServiceForProd.swift in Sources */,
 				A9D33AEA20D3287100946C12 /* ProductCell.swift in Sources */,
 				A9D33ADE20D3068600946C12 /* ProductGridViewController.swift in Sources */,
 				A94BFF8720D6884D00E9351A /* DataServiceTests.swift in Sources */,

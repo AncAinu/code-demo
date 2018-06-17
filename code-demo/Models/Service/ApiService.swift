@@ -1,5 +1,5 @@
 //
-//  DataService.swift
+//  ApiService.swift
 //  code-demo
 //
 //  Created by Tancrède Chazallet on 17/06/2018.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-protocol DataService {
+protocol ApiService {
 	func requestProducts(response: @escaping Response<[ProductEntity]>)
 }
-
