@@ -18,7 +18,7 @@ class ProductEntityTests: XCTestCase {
 		"now": "312.43"
 	},
 	"title": "Test product 12",
-	"image": "http://www.testurl.com/path/image.jpg"
+	"image": "//www.testurl.com/path/image.jpg"
 }
 """
 		let jsonData = json.data(using: .utf8)!

@@ -24,7 +24,7 @@ struct ProductEntityForProd: ProductEntity {
 		case productId
 		case privatePrice = "price"
 		case title
-		case imageUrl = "image"
+		case privateImageUrl = "image"
 	}
 	
 	let productId: String
@@ -36,5 +36,9 @@ struct ProductEntityForProd: ProductEntity {
 	
 	let title: String
 	
-	var imageUrl: URL
+	private let privateImageUrl: String
+	var imageUrl: URL {
+		return URL(string: "http:" + privateImageUrl)!
+	}
+	
 }

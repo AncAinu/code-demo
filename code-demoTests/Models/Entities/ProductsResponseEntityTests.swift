@@ -31,7 +31,7 @@ class ProductsResponseEntityTests: XCTestCase {
 				"now": "312.43"
 			},
 			"title": "Test product 12",
-			"image": "http://www.testurl.com/path/image.jpg"
+			"image": "//www.testurl.com/path/image.jpg"
 		}
 	]
 }
@@ -56,7 +56,7 @@ class ProductsResponseEntityTests: XCTestCase {
 				"now": "312.43"
 			},
 			"title": "Test product 12",
-			"image": "http://www.testurl.com/path/image.jpg"
+			"image": "//www.testurl.com/path/image.jpg"
 		},
 		{
 			"productId": "32425",
@@ -64,7 +64,7 @@ class ProductsResponseEntityTests: XCTestCase {
 				"now": "43.11"
 			},
 			"title": "Test product 11",
-			"image": "http://www.testurl.com/path/image2.jpg"
+			"image": "//www.testurl.com/path/image2.jpg"
 		}
 	]
 }
