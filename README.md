@@ -38,6 +38,10 @@ Entities are simple structures that holds data, they hold very little logic, but
 Services holds the core logic of the app, while viewmodels holds the logic of display, services are on a higher level and should be reusable by many different viewmodels.
 DataService is the best example, we could have viewmodels using an ApiService directly but then we keep the data on a per-viewmodel basis, hindering the ability to share data accross the app.
 
+### Bindings
+
+Reached a certain point, we want to retain data into services. The problem we face is that, if service retain data which are used by many clients (viewmodels), then they [the clients] need to get notified that the data was updated. There is many reasons which make closures, kvo or notifications bad design, and reactive frameworks a good solution, although, since we do not want to bring "too much" to that code demo (and most reactive frameworks are easily too much), we'll use a small class `Dynamic` which copy some basic principles of reactive programming and can be easily understood by anyone. It just makes us able to attach listeners to the variable changes.
+
 ### Dependencies
 
 The project use cocoapods as a dependency manager, for the purpose of this project, because it is the most used.
