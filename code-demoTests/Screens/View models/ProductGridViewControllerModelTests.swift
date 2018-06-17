@@ -10,6 +10,7 @@ import XCTest
 
 class ProductGridViewControllerModelTests: XCTestCase {
 	
+	var mockedImageService: ImageServiceForTesting!
 	var mockedDataService: DataServiceForTesting!
 	var sut: ProductGridViewControllerModelForProd!
     
@@ -17,7 +18,8 @@ class ProductGridViewControllerModelTests: XCTestCase {
         super.setUp()
 		
 		mockedDataService = DataServiceForTesting()
-		sut = ProductGridViewControllerModelForProd(dataService: DataService)
+		mockedImageService = ImageServiceForTesting()
+		sut = ProductGridViewControllerModelForProd(dataService: mockedDataService, imageService: mockedImageService)
     }
 	
 	func test_refresh() {
@@ -36,8 +38,12 @@ extension ProductGridViewControllerModelTests {
 	}
 	
 	class DataServiceForTesting: DataService {
-		func requestProducts(response: @escaping (Result<[ProductEntity]>)) {
+		func requestProducts(response: @escaping Response<[ProductEntity]>) {
 			response(.success([ProductEntityForTesting(), ProductEntityForTesting(), ProductEntityForTesting()]))
 		}
+	}
+	
+	class ImageServiceForTesting: ImageService {
+		func imageForUrl(_ url: URL, response: @escaping ImageServiceResponse) {}
 	}
 }
