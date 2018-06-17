@@ -18,6 +18,10 @@ class ProductGridViewController: UICollectionViewController {
 		let flowLayout = UICollectionViewFlowLayout()
 		
 		super.init(collectionViewLayout: flowLayout)
+		
+		viewModel.productCellModels.bind(self) { [weak self] _ in
+			self?.collectionView?.reloadData()
+		}
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -28,16 +32,20 @@ class ProductGridViewController: UICollectionViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+		collectionView?.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
+		
+		viewModel.refresh()
 	}
 	
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return viewModel.productCellModels.count
+		return viewModel.productCellModels.value.count
 	}
 	
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-		cell.backgroundColor = .red
+		let cellViewModel = viewModel.productCellModels.value[indexPath.row]
+		
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.identifier, for: indexPath) as! ProductCell
+		cell.viewModel = cellViewModel
 		return cell
 	}
 }

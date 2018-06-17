@@ -12,7 +12,7 @@ class ProductGridViewControllerModelForProd: ProductGridViewControllerModel {
 	private let dataService: DataService
 	private let imageService: ImageService
 	
-	private(set) var productCellModels: [ProductCellModel] = []
+	let productCellModels = Dynamic<[ProductCellModel]>([])
 	
 	// MARK: INIT
 	init(dataService: DataService, imageService: ImageService) {
@@ -23,7 +23,7 @@ class ProductGridViewControllerModelForProd: ProductGridViewControllerModel {
 		dataService.products.bindAndFire(self) { [weak self] value in
 			guard let `self` = self else { return }
 			
-			self.productCellModels = value.map {
+			self.productCellModels.value = value.map {
 				ProductCellModelForProd(product: $0, imageService: self.imageService)
 			}
 		}

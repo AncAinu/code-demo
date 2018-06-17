@@ -16,7 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
 		window = UIWindow(frame: UIScreen.main.bounds)
-		window?.rootViewController = ViewController()
+		
+		let apiService = ApiServiceForProd()
+		let dataService = DataServiceForProd(apiService: apiService)
+		let imageService = ImageServiceForProd()
+		
+		let productGridViewControllerModel = ProductGridViewControllerModelForProd(dataService: dataService, imageService: imageService)
+		let productGridViewController = ProductGridViewController(viewModel: productGridViewControllerModel)
+		let navigationController = UINavigationController(rootViewController: productGridViewController)
+		
+		window?.rootViewController = navigationController
 		window?.makeKeyAndVisible()
 		
 		return true

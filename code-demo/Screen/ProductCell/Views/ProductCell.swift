@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 
 class ProductCell: UICollectionViewCell {
+	static let identifier = #function
+	
 	var viewModel: ProductCellModel? {
 		didSet {
 			guard let viewModel = viewModel else { return }

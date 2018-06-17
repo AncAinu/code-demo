@@ -16,7 +16,6 @@
 		A935AD6720D1CF5300B8DB6E /* ProductResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935AD6520D1CF4700B8DB6E /* ProductResponseEntity.swift */; };
 		A935AD6D20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935AD6C20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift */; };
 		A93BF45620D1A3C600CF8984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF45520D1A3C600CF8984 /* AppDelegate.swift */; };
-		A93BF45820D1A3C600CF8984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BF45720D1A3C600CF8984 /* ViewController.swift */; };
 		A93BF45D20D1A3CD00CF8984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93BF45C20D1A3CD00CF8984 /* Assets.xcassets */; };
 		A93BF46020D1A3CD00CF8984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93BF45E20D1A3CD00CF8984 /* LaunchScreen.storyboard */; };
 		A94BFF7F20D6819000E9351A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF7E20D6819000E9351A /* DataService.swift */; };
@@ -31,6 +30,7 @@
 		A94BFF8D20D68B3900E9351A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8A20D68A3400E9351A /* ApiService.swift */; };
 		A94BFF8F20D68E9B00E9351A /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8E20D68E9B00E9351A /* Dynamic.swift */; };
 		A94BFF9320D68FB800E9351A /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF8E20D68E9B00E9351A /* Dynamic.swift */; };
+		A94BFF9520D6957B00E9351A /* ApiServiceForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFF9420D6957B00E9351A /* ApiServiceForProd.swift */; };
 		A96AFE0220D403EA001B55C1 /* ProductCellModelForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AFE0120D403EA001B55C1 /* ProductCellModelForProd.swift */; };
 		A96AFE0820D4086E001B55C1 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AFE0720D4086E001B55C1 /* ImageService.swift */; };
 		A96AFE0A20D4090A001B55C1 /* ImageServiceForProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AFE0920D4090A001B55C1 /* ImageServiceForProd.swift */; };
@@ -75,7 +75,6 @@
 		A935AD6C20D1D5E200B8DB6E /* ProductGridViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridViewControllerTests.swift; sourceTree = "<group>"; };
 		A93BF45220D1A3C600CF8984 /* code-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "code-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93BF45520D1A3C600CF8984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A93BF45720D1A3C600CF8984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A93BF45C20D1A3CD00CF8984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93BF45F20D1A3CD00CF8984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A93BF46120D1A3CD00CF8984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		A94BFF8820D68A2800E9351A /* DataServiceForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceForProd.swift; sourceTree = "<group>"; };
 		A94BFF8A20D68A3400E9351A /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		A94BFF8E20D68E9B00E9351A /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		A94BFF9420D6957B00E9351A /* ApiServiceForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceForProd.swift; sourceTree = "<group>"; };
 		A96AFE0120D403EA001B55C1 /* ProductCellModelForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModelForProd.swift; sourceTree = "<group>"; };
 		A96AFE0720D4086E001B55C1 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		A96AFE0920D4090A001B55C1 /* ImageServiceForProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceForProd.swift; sourceTree = "<group>"; };
@@ -221,11 +221,10 @@
 		A93BF45420D1A3C600CF8984 /* code-demo */ = {
 			isa = PBXGroup;
 			children = (
+				A93BF45520D1A3C600CF8984 /* AppDelegate.swift */,
 				A94BFF8020D681FA00E9351A /* Helpers */,
 				A935AD5E20D1C48200B8DB6E /* Models */,
 				A9D33AD020D3024400946C12 /* Screen */,
-				A93BF45520D1A3C600CF8984 /* AppDelegate.swift */,
-				A93BF45720D1A3C600CF8984 /* ViewController.swift */,
 				A93BF45C20D1A3CD00CF8984 /* Assets.xcassets */,
 				A93BF45E20D1A3CD00CF8984 /* LaunchScreen.storyboard */,
 				A93BF46120D1A3CD00CF8984 /* Info.plist */,
@@ -262,6 +261,7 @@
 				A94BFF7E20D6819000E9351A /* DataService.swift */,
 				A94BFF8820D68A2800E9351A /* DataServiceForProd.swift */,
 				A94BFF8A20D68A3400E9351A /* ApiService.swift */,
+				A94BFF9420D6957B00E9351A /* ApiServiceForProd.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -542,11 +542,11 @@
 				A935AD6120D1C4A000B8DB6E /* ProductEntity.swift in Sources */,
 				A94BFF8920D68A2800E9351A /* DataServiceForProd.swift in Sources */,
 				A94BFF8B20D68A3400E9351A /* ApiService.swift in Sources */,
+				A94BFF9520D6957B00E9351A /* ApiServiceForProd.swift in Sources */,
 				A9D33ADD20D3057100946C12 /* ProductCellModel.swift in Sources */,
 				A96AFE0A20D4090A001B55C1 /* ImageServiceForProd.swift in Sources */,
 				A96AFE0220D403EA001B55C1 /* ProductCellModelForProd.swift in Sources */,
 				A94BFF8F20D68E9B00E9351A /* Dynamic.swift in Sources */,
-				A93BF45820D1A3C600CF8984 /* ViewController.swift in Sources */,
 				A93BF45620D1A3C600CF8984 /* AppDelegate.swift in Sources */,
 				A9D33AE920D3267400946C12 /* ProductCell.swift in Sources */,
 				A96AFE0820D4086E001B55C1 /* ImageService.swift in Sources */,

@@ -23,9 +23,9 @@ class ProductGridViewControllerModelTests: XCTestCase {
     }
 	
 	func test_refresh() {
-		XCTAssertEqual(sut.productCellModels.count, 1) // We check that its taking the existing value
+		XCTAssertEqual(sut.productCellModels.value.count, 1) // We check that its taking the existing value
 		sut.refresh()
-		XCTAssertEqual(sut.productCellModels.count, 3) // And then the new one
+		XCTAssertEqual(sut.productCellModels.value.count, 3) // And then the new one
 	}
 }
 

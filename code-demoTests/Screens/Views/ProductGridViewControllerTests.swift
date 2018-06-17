@@ -18,19 +18,20 @@ class ProductGridViewControllerTests: XCTestCase {
 	}
 	
 	func test_no_products() {
-		mockedViewModel.productCellModels = []
+		mockedViewModel.productCellModels.value = []
 		XCTAssertEqual(sut.collectionView?.numberOfItems(inSection: 0), 0)
 	}
 	
 	func test_3_products() {
-		mockedViewModel.productCellModels = [ProductCellModelForTesting(), ProductCellModelForTesting(), ProductCellModelForTesting()]
+		mockedViewModel.productCellModels.value = [ProductCellModelForTesting(), ProductCellModelForTesting(), ProductCellModelForTesting()]
 		XCTAssertEqual(sut.collectionView?.numberOfItems(inSection: 0), 3)
 	}
 }
 
 extension ProductGridViewControllerTests {
 	class ProductGridViewControllerModelForTesting: ProductGridViewControllerModel {
-		var productCellModels: [ProductCellModel] = []
+		let productCellModels = Dynamic<[ProductCellModel]>([])
+		func refresh() {}
 	}
 	
 	class ProductCellModelForTesting: ProductCellModel {

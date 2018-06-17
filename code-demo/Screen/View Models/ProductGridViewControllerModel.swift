@@ -9,5 +9,7 @@
 import Foundation
 
 protocol ProductGridViewControllerModel: AnyObject {
-	var productCellModels: [ProductCellModel] { get }
+	var productCellModels: Dynamic<[ProductCellModel]> { get }
+	
+	func refresh()
 }
