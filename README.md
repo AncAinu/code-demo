@@ -1,7 +1,7 @@
 # Code Demo
 
 
-master: [![Build Status - master](https://www.bitrise.io/app/7b269aa72022b1dc/status.svg?token=SwfREuqPfW8WTjMMiXStPw&branch=master)](https://www.bitrise.io/app/7b269aa72022b1dc) | develop: [![Build Status - develop](https://www.bitrise.io/app/7b269aa72022b1dc/status.svg?token=SwfREuqPfW8WTjMMiXStPw&branch=develop)](https://www.bitrise.io/app/7b269aa72022b1dc)
+master: [![Build Status - master](https://www.bitrise.io/app/7b269aa72022b1dc/status.svg?token=SwfREuqPfW8WTjMMiXStPw&branch=master)](https://www.bitrise.io/app/7b269aa72022b1dc) [![codecov](https://codecov.io/gh/AncAinu/code-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/AncAinu/code-demo) | develop: [![Build Status - develop](https://www.bitrise.io/app/7b269aa72022b1dc/status.svg?token=SwfREuqPfW8WTjMMiXStPw&branch=develop)](https://www.bitrise.io/app/7b269aa72022b1dc) [![codecov](https://codecov.io/gh/AncAinu/code-demo/branch/develop/graph/badge.svg)](https://codecov.io/gh/AncAinu/code-demo)
 
 ## Technical choices
 
